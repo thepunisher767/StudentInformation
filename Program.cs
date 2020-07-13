@@ -12,7 +12,7 @@ namespace StudentInformation
             const int arrayLength = 11;
             string[] studentNames = {"Charlie", "Frank", "Mac", "Dennis", "Artemis", "Cricket", "Liam", "Ryan", "Waitress", "Dee", "Bill"};
             string[] studentFood = {"cheese", "rum ham", "beer", "pizza", "jagerbombs", "lemons", "milk", "milk", "coffee", "trash cake", "drugs" };
-            string[] studentOldTitle = {"janitor", "duper", "muscle", "psychopath", "drunk", "priest", "kidnapper", "Liam's shadow", "barista", "bird", "football player" };
+            string[] studentOldTitle = {"janitor", "The Warthog", "muscle", "psychopath", "drunk", "priest", "kidnapper", "Liam's shadow", "barista", "bird", "proud father" };
 
             bool continueFlag = true;
             Console.WriteLine("Welcome to our Dev.Build class!\n");
@@ -117,7 +117,7 @@ namespace StudentInformation
 
                 }
             }
-            Console.WriteLine("OK BYEEEEEEEEE!!!!!!!!!");
+            Console.WriteLine("OK BYEEEEEEEEE!!!!!!!!!\n\n\n\n\n");
         }
 
         private static string YesOrNo(string answer) //method to check (y/n)
