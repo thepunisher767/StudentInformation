@@ -50,6 +50,16 @@ namespace StudentInformation
                     string userAnswer = Console.ReadLine();
                     userAnswer = userAnswer.ToLower();
                     Console.WriteLine();
+
+                    while (userAnswer != "f" && userAnswer != "t")
+                    {
+
+                        Console.Write("Please enter a valid selection (f/t): ");
+                        userAnswer = Console.ReadLine();
+                        userAnswer = userAnswer.ToLower();
+                        Console.WriteLine();
+                    }
+
                     if (userAnswer == "f" || userAnswer == "t")
                     {
                         switch (userAnswer)
@@ -68,16 +78,16 @@ namespace StudentInformation
                     }
                     else
                     {
-                        Console.Write("Please enter a valid selection: ");
+                        //HAHAHAHAHHAHAA
                     }
 
-                    Console.Write($"Would you like to learn more about {studentNames[userInput - 1]} (y/n)?: ");
+                    Console.Write($"Would you like to learn more about {studentNames[userInput - 1]} (y/n)?: "); // WOULD YOU LIKE TO KNOW MORE?!?!?!??!
                     string extra = YesOrNo(Console.ReadLine());
                     Console.WriteLine();
 
                     if (extra == "y")
                     {
-                        switch (userAnswer)
+                        switch (userAnswer) //switch the results of the previous switch to get the unknown info
                         {
                             case "t":
                                 Console.WriteLine($"{studentNames[userInput - 1]}'s favorite food is {studentFood[userInput - 1]}.\n");
@@ -92,7 +102,7 @@ namespace StudentInformation
                         }
                     }
 
-                    Console.Write("Would you like to learn about a different student (y/n)?: ");
+                    Console.Write("Would you like to learn about a different student (y/n)?: "); // WOULD YOU LIKE TO KNOW MORE?!?!?!?!?!?!?
                     string cont = YesOrNo(Console.ReadLine());
                     Console.WriteLine();
 
@@ -110,7 +120,7 @@ namespace StudentInformation
             Console.WriteLine("OK BYEEEEEEEEE!!!!!!!!!");
         }
 
-        private static string YesOrNo(string answer)
+        private static string YesOrNo(string answer) //method to check (y/n)
         {
             answer = answer.ToLower();
             while (answer != "y" && answer != "n")
@@ -124,10 +134,10 @@ namespace StudentInformation
             return answer;
         }
 
-        public static int IntValidation(string input)
+        public static int IntValidation(string input) // data validation
         {
             int validIntOutput;
-            while (!int.TryParse(input, out validIntOutput) || validIntOutput < 1 || validIntOutput > 11)
+            while (!int.TryParse(input, out validIntOutput) || validIntOutput < 1 || validIntOutput > 11) //manually set range
             {
                 Console.WriteLine($"\nPlease enter a 1 through 11");
                 Console.Write("Try again please: ");
